@@ -18,6 +18,15 @@ type Request struct {
 	} `json:"query"` 
 }
 
+
+
+
+
+
+
+
+
+
 type Visited [20][20]bool
 
 var directions = [][2]int{{0, 1}, {1, 0}, {0, -1}, {-1, 0}} // right, down, left, up
@@ -52,6 +61,9 @@ func dfs(current []int, target []int, visited Visited, path [][]int, grid [20][2
 
 // Handler to process input requests
 func getInput(w http.ResponseWriter, r *http.Request) {
+
+
+	
 	// Content-Type and body size enforcement
 	ct := r.Header.Get("Content-Type")
 	if ct != "" {
